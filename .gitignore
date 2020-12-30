@@ -1,0 +1,12 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+data/*
+maps/*
+Figures/*
+*.zip
+*.mxd
+*.mpk
+stl_api.txt
+Phil_STL_Map.mxd
