@@ -11,6 +11,8 @@ data_dir = './data'
 
 if(length(dir(data_dir())) < 1) { stop(paste('Please first obtain the Streetlight Data evaluation data set and unzip into the directory', data_dir))}
 
+if(!dir.exists('Figures')) { dir.create('Figures') }
+
 monthly_dirs = dir(data_dir)[grep('Bicyclists_20\\d{2}_\\d{2}', dir(data_dir))]
 
 # From za zonal attributes data files within month

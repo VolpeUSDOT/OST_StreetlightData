@@ -22,6 +22,8 @@ data_dir = './data'
 
 if(length(dir(data_dir())) < 1) { stop(paste('Please first obtain the Streetlight Data evaluation data set and unzip into the directory', data_dir))}
 
+if(!dir.exists('Figures')) { dir.create('Figures') }
+
 # Read in the intersection shapefile from one of the files
 zones = readOGR(dsn = file.path(data_dir, 'stl_data/128523_Pedestrians_06092020/Shapefile'), layer = '128523_Pedestrians_06092020_zone_activity')
 
@@ -82,12 +84,12 @@ crash_sp = SpatialPointsDataFrame(crashes[c("DEC_LONG", "DEC_LAT")],
                                  crashes,
                                  proj4string = CRS("+proj=longlat +datum=WGS84"))
 
-pdf(paste0('CrashPlotting_', year, '.pdf'))
+pdf(paste0('Figures/CrashPlotting_', year, '.pdf'))
 
 plot(crash_sp, col = scales::alpha('grey80', 0.5))
 plot(zones, add = T)
 
-dev.off(); system('open CrashPlotting_2019.pdf')
+dev.off(); system('open Figures/CrashPlotting_2019.pdf')
 
 # Add crashes to zones
 
