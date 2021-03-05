@@ -23,6 +23,6 @@ Once the data is obtained an unzipped in a folder `data` inside this directory, 
   + Produces crash rate calculations using FHWA methodology for intersections, using vehicle counts as the denominator
   + Produces plots and analysis of crash rates for bicyclists, pedestrians, and vehicles for a given study year (2018 or 2019).
 
-Experimental code includes `Calibrate_Bicyclists.R`, which assesses which locations with ground-truth crash data could potentially have been used for calibration of the Streetlight Data Index values for bicyclists. Additional code was written in Python in the directory `code_v0`, which is kept as reference but was not used in generating the report.
+Experimental code includes `Calibrate_Bicyclists.R`, which assesses which locations with ground-truth crash data could potentially have been used for calibration of the Streetlight Data Index values for bicyclists.
 
 
